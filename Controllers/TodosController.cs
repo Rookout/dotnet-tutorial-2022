@@ -58,13 +58,13 @@ namespace dotnet_tutorial_2022.Controllers
                 todos = new List<Todo>() { };
             }
             string id = Guid.NewGuid().ToString();
-            string url = $"{Request.Host}{Request.Path}/${id}";
+            string url = $"{Request.Scheme}://{Request.Host}{Request.Path}/{id}";
             Todo todo = new()
             {
                 Id = id,
                 Url = url,
                 Title = newTodo.Title,
-                Completed = newTodo.Completed,
+                Completed = newTodo.Completed ?? false,
                 Order = newTodo.Order
             };
             todos.Add(todo);

@@ -6,7 +6,7 @@ namespace dotnet_tutorial_2022.Models
         public string Id { get; set; }
         public string Title { get; set; }
         public string Url { get; set; }
-        public bool? Completed { get; set; }
+        public bool Completed { get; set; }
         public int? Order { get; set; }
 
         public Todo()
