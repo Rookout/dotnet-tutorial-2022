@@ -19,4 +19,7 @@
     <None Remove="Models\" />
     <None Remove="ViewModels\" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Rookout" Version="0.1.115" />
+  </ItemGroup>
 </Project>
