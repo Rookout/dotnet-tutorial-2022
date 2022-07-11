@@ -1,4 +1,13 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using Rook;
+
+Rook.RookOptions options = new Rook.RookOptions()
+{
+    token = "XXXXXXXXXXXXXXXX",
+    labels = new Dictionary<string, string> { { "env", "dev" } }
+};
+Rook.API.Start(options);
+
+var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
