@@ -18,4 +18,5 @@ RUN dotnet publish "dotnet-tutorial-2022.csproj" -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+COPY .git /.git
 ENTRYPOINT ["dotnet", "dotnet-tutorial-2022.dll"]

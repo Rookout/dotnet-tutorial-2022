@@ -1,6 +1,7 @@
 **/.classpath
 **/.dockerignore
 **/.env
+# Keep ignoring .git
 **/.git
 **/.gitignore
 **/.project
@@ -23,3 +24,7 @@
 **/values.dev.yaml
 LICENSE
 README.md
+# Allow specific files with !
+!.git/HEAD
+!.git/config
+!.git/refs
